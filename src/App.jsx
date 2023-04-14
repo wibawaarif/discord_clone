@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, Login, Register, Dashboard } from './components'
+import { Home, Login, Register, Dashboard } from './pages'
 
 function App() {
   return (
