@@ -20,9 +20,9 @@ const Navbar = ({items}) => {
           ))}
         </div>
 
-        <button className="bg-white transition duration-[400ms] px-4 py-2 rounded-full text-sm hover:text-[#5865f2] hover:shadow-2xl">
+        <Link to="/login" className="bg-white transition duration-[400ms] px-4 py-2 rounded-full text-sm hover:text-[#5865f2] hover:shadow-2xl">
           Login
-        </button>
+        </Link>
       </div>
     )
 }
