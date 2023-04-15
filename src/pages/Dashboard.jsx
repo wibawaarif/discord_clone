@@ -1,8 +1,26 @@
+import { Link } from "react-router-dom";
 
-function Dashboard() {
+import ChannelSidebar from "../components/ChannelSidebar";
+import MainSidebar from "../components/MainSidebar";
+import Feed from "../components/Feed";
+
+const Dashboard = () => {
 
     return (
-        <div>Dashboard</div>
+        <div className="container h-screen w-screen">
+            <div className="flex">
+
+                {/* Channel Sidebar */}
+                <ChannelSidebar />
+
+                {/* Main Sidebar */}
+                <MainSidebar />
+
+                {/* Feed */}
+                <Feed />
+            </div>
+
+        </div>
     )
 }
 

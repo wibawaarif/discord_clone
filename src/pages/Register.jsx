@@ -24,7 +24,7 @@ const Register = () => {
                 <button className="transition duration-[200ms] h-[2.5rem] w-[26rem] py-6 bg-[#5865F2] hover:bg-[#424ec2] flex items-center justify-center text-[#dcddde] font-bold rounded-sm">Continue</button>
 
                 <div className="text-left w-[26rem] mt-2">
-                <Link to="/login" className="text-[#049CEA] text-sm hover:underline hover:cursor-pointer">Already have an account?</Link>
+                <Link to="/login" className="text-[#049CEA] font-semibold text-sm hover:underline hover:cursor-pointer">Already have an account?</Link>
                 <p className="text-[0.7rem] text-[#b9bbbe] text-xs hover:underline hover:cursor-pointer mt-5">By registering, you agree to Discord's <span className="text-[#049CEA] hover:underline">Terms of Service</span> and <span className="text-[#049CEA] hover:underline">Privacy Policy</span></p>
                 </div>
 

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
@@ -12,37 +14,38 @@ import TinyStarsLanding from "../../assets/tiny_stars_landing.svg";
 import Download from "../../assets/download.svg";
 import Download_White from "../../assets/download_white.svg";
 
-function Home() {
-  const navbar = ["Download", "Nitro", "Safety", "Support", "Blog", "Careers"];
-  const footer = [
-    { Product: ["Download", "Nitro", "Status"] },
-    { Company: ["About", "Jobs", "Branding", "Newsroom"] },
-    {
-      Resources: [
-        "College",
-        "Support",
-        "Safety",
-        "Blog",
-        "Feedback",
-        "Build",
-        "StreamKit",
-        "Creators",
-        "Community",
-      ],
-    },
-    {
-      Policies: [
-        "Terms",
-        "Privacy",
-        "Cookie Settings",
-        "Guidelines",
-        "Acknowledgements",
-        "Licenses",
-        "Moderation",
-      ],
-    },
-  ];
+const navbar = ["Download", "Nitro", "Safety", "Support", "Blog", "Careers"];
+const footer = [
+  { Product: ["Download", "Nitro", "Status"] },
+  { Company: ["About", "Jobs", "Branding", "Newsroom"] },
+  {
+    Resources: [
+      "College",
+      "Support",
+      "Safety",
+      "Blog",
+      "Feedback",
+      "Build",
+      "StreamKit",
+      "Creators",
+      "Community",
+    ],
+  },
+  {
+    Policies: [
+      "Terms",
+      "Privacy",
+      "Cookie Settings",
+      "Guidelines",
+      "Acknowledgements",
+      "Licenses",
+      "Moderation",
+    ],
+  },
+];
 
+
+function Home() {
   return (
     <div className="container">
       <div style={{ height: "625px" }} className="static bg-[#404EED] z-0">
@@ -74,9 +77,9 @@ function Home() {
                 <span className="text-xl">Download for Windows</span>
               </div>
             </button>
-            <button className="bg-zinc-800 transition duration-[400ms] hover:bg-zinc-700 hover:shadow-xl text-white px-8 py-4 rounded-full">
+            <Link to="/dashboard" className="bg-zinc-800 transition duration-[400ms] hover:bg-zinc-700 hover:shadow-xl text-white px-8 py-4 rounded-full">
               <span className="text-xl">Open Discord in your browser</span>
-            </button>
+            </Link>
           </div>
         </div>
         <img

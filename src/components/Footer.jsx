@@ -37,10 +37,10 @@ const Footer = ({ items }) => {
             </div>
 
             <div style={{ width: "200px" }} className="flex justify-between">
-              <img width={24} height={24} src={YoutubeIcon} />
-              <img width={24} height={24} src={TwitterIcon} />
-              <img width={24} height={24} src={FacebookIcon} />
-              <img width={24} height={24} src={InstagramIcon} />
+              <img className="hover:cursor-pointer" width={24} height={24} src={YoutubeIcon} />
+              <img className="hover:cursor-pointer" width={24} height={24} src={TwitterIcon} />
+              <img className="hover:cursor-pointer" width={24} height={24} src={FacebookIcon} />
+              <img className="hover:cursor-pointer" width={24} height={24} src={InstagramIcon} />
             </div>
           </div>
 
@@ -74,9 +74,9 @@ const Footer = ({ items }) => {
 
         <div className="flex justify-between items-center mt-8">
           <img className="cursor-pointer" src={DiscordMainLogo} />
-          <button className="bg-[#5865F2] text-white px-4 py-2 transition duration-[400ms] rounded-full text-sm hover:bg-[#7983F5] hover:shadow-2xl">
+          <Link to="/login" className="bg-[#5865F2] text-white px-4 py-2 transition duration-[400ms] rounded-full text-sm hover:bg-[#7983F5] hover:shadow-2xl">
             Login
-          </button>
+          </Link>
         </div>
       </div>
     </div>
