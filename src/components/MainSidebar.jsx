@@ -1,7 +1,10 @@
 import PlusLogo from "../../assets/plus_icon.svg";
 import EmptyList from "../../assets/empty_dm_list.svg";
+import CloseLogo from "../../assets/close_icon.svg";
+import HashtagLogo from "../../assets/hashtag.svg";
+import ArrowLogo from "../../assets/arrow.svg";
 
-const MainSidebar = ({ page }) => {
+const MainSidebar = ({ page, channels }) => {
   return (
     <div className="h-screen bg-[#2F3136] w-[20rem] flex flex-col justify-center items-center">
       {page === 'dashboard' ? (
@@ -96,7 +99,35 @@ const MainSidebar = ({ page }) => {
           </div>
         </>
       ) : (
-        <div>Not Dashboard</div>
+        <>
+            <div className="w-[14.5rem] h-[54.5rem]">
+
+                <div className="flex justify-between px-2 mt-2">
+                    <p className="text-white font-bold">React Lovers</p>
+                    <img className="hover:cursor-pointer" width={20} height={20} src={CloseLogo} />
+                </div>
+
+                <div className="flex rounded-md px-2 py-2 items-center mt-2 hover:cursor-pointer hover:bg-[#393C43] group">
+                    <img className="mr-3" width={22} height={22} src={HashtagLogo} />
+                    <p className="text-[#8e9297] font-medium group-hover:text-white">rules</p>
+                </div>
+
+                <div className="flex mt-6">
+                  <img className="mr-1" width={12} height={12} src={ArrowLogo} />
+                  <p className="text-white text-sm font-medium">TEXT CHANNELS</p>
+                </div>
+
+                {
+                  channels.map(x => (
+                    <div  className="flex rounded-md px-2 py-2 items-center mt-2 hover:cursor-pointer hover:bg-[#393C43] group">
+                        <img className="mr-3" width={22} height={22} src={HashtagLogo} />
+                        <p className="text-[#8e9297] font-medium group-hover:text-white">{x}</p>
+                    </div>
+                  ))
+                }
+
+            </div>
+        </>
       )}
     </div>
   );

@@ -14,7 +14,7 @@ const ChannelSidebar = ({page, setPage}) => {
 
                 <img onClick={() => setPage('group-1')} width={55} height={55} className="rounded-2xl hover:cursor-pointer mt-3" src={GroupLogo} />
 
-                <div className="bg-[#36393F] rounded-full w-[3.438rem] h-[3.438rem] mt-3 hover:cursor-pointer flex justify-center items-center">
+                <div className="bg-[#36393F] rounded-full w-[3.438rem] h-[3.438rem] mt-3 hover:cursor-pointer flex justify-center items-center transition duration-[400ms] hover:bg-[#3ba55d] group">
                     <img width={20} height={20} src={PlusLogo} />
                 </div>
 
@@ -24,8 +24,12 @@ const ChannelSidebar = ({page, setPage}) => {
                     </div>
                 </div>
 
-                <div className="bg-[#36393F] rounded-full w-[3.438rem] h-[3.438rem] mt-3 hover:cursor-pointer flex justify-center items-center">
+                <div className="bg-[#36393F] rounded-full w-[3.438rem] h-[3.438rem] mt-3 hover:cursor-pointer flex justify-center items-center transition duration-[400ms] hover:bg-[#3ba55d] group">
                     <img width={22} height={22} src={DownloadGreen} />
+                </div>
+
+                <div>
+                    <img />
                 </div>
 
             </div>
