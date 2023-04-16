@@ -5,12 +5,28 @@ import ChannelSidebar from "../components/ChannelSidebar";
 import MainSidebar from "../components/MainSidebar";
 import Feed from "../components/Feed";
 
-const channels = ['algorithms', 'announcements', 'blogging', 'machine-learning', 'blockchain', 'smart-contract', 'web3', 'fullstack-dev', 'showcase', 'help', 'notifications-and-roles']
+const channels = ['algorithms', 'announcements', 'blogging', 'machine-learning', 'blockchain', 'smart-contract', 'web3', 'fullstack-dev', 'showcase', 'help', 'notifications-and-roles', 'blogging', 'machine-learning', 'blockchain', 'smart-contract', 'web3', 'fullstack-dev', 'showcase', 'help', 'notifications-and-roles']
 
 const Dashboard = () => {
     const [page, setPage] = useState('dashboard');
     const [dashboardMenu, setDashboardMenu] = useState('friends');
     const [navbarMenu, setNavbarMenu] = useState('online');
+    const [isMicActive, setIsMicActive] = useState(false);
+    const [isSpeakerActive, setIsSpeakerActive] = useState(false);
+    const [initialAudio, setInitialAudio] = useState('');
+
+    const mainSideBarProps = {
+        page,
+        channels,
+        setDashboardMenu,
+        dashboardMenu,
+        isMicActive,
+        setIsMicActive,
+        isSpeakerActive,
+        setIsSpeakerActive,
+        initialAudio,
+        setInitialAudio
+    }
 
     return (
         <div className="container h-screen w-screen">
@@ -20,10 +36,10 @@ const Dashboard = () => {
                 <ChannelSidebar page={page} setPage={setPage} />
 
                 {/* Main Sidebar */}
-                <MainSidebar dashboardMenu={dashboardMenu} setDashboardMenu={setDashboardMenu} channels={channels} page={page} />
+                <MainSidebar {...mainSideBarProps} />
 
                 {/* Feed */}
-                <Feed navbarMenu={navbarMenu} setNavbarMenu={setNavbarMenu} dashboardMenu={dashboardMenu} />
+                <Feed page={page} navbarMenu={navbarMenu} setNavbarMenu={setNavbarMenu} dashboardMenu={dashboardMenu} />
             </div>
 
         </div>

@@ -10,7 +10,7 @@ const ChannelSidebar = ({page, setPage}) => {
   return (
     <div className="h-screen bg-[#202225]">
             <div className="flex flex-col justify-center items-center mt-5 px-2">
-                <DiscordLogo click={setPage} outside="rounded-2xl hover:cursor-pointer group" inside={page === 'dashboard' ? 'fill-[#5865F2]' : 'fill-[#2E3136] group-hover:fill-[#5865F2] transition duration-[400ms]'} />
+                <DiscordLogo height={55} width={55} click={setPage} outside="rounded-2xl hover:cursor-pointer group" inside={page === 'dashboard' ? 'fill-[#5865F2]' : 'fill-[#2E3136] group-hover:fill-[#5865F2] transition duration-[400ms]'} />
 
                 <img onClick={() => setPage('group-1')} width={55} height={55} className="rounded-2xl hover:cursor-pointer mt-3" src={GroupLogo} />
 
