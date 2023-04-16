@@ -9,6 +9,8 @@ const channels = ['algorithms', 'announcements', 'blogging', 'machine-learning',
 
 const Dashboard = () => {
     const [page, setPage] = useState('dashboard');
+    const [dashboardMenu, setDashboardMenu] = useState('friends');
+    const [navbarMenu, setNavbarMenu] = useState('online');
 
     return (
         <div className="container h-screen w-screen">
@@ -18,10 +20,10 @@ const Dashboard = () => {
                 <ChannelSidebar page={page} setPage={setPage} />
 
                 {/* Main Sidebar */}
-                <MainSidebar channels={channels} page={page} />
+                <MainSidebar dashboardMenu={dashboardMenu} setDashboardMenu={setDashboardMenu} channels={channels} page={page} />
 
                 {/* Feed */}
-                <Feed />
+                <Feed navbarMenu={navbarMenu} setNavbarMenu={setNavbarMenu} dashboardMenu={dashboardMenu} />
             </div>
 
         </div>
