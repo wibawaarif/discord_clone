@@ -23,8 +23,6 @@ const MainSidebar = (props) => {
     setIsMicActive,
     isSpeakerActive,
     setIsSpeakerActive,
-    initialAudio,
-    setInitialAudio
   } = props;
 
   return (

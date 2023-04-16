@@ -1,5 +1,8 @@
 import NoOnlineFriendsLogo from "../../assets/no_online_friends.svg";
 import NoFriendsLogo from "../../assets/pending_users_icon.svg";
+import NotificationLogo from "../../assets/notification.svg";
+import PinLogo from "../../assets/pin_icon.svg";
+import ListFriendsLogo from "../../assets/list_friends.svg";
 
 import FriendsLogo from "../../assets/friends";
 
@@ -131,7 +134,27 @@ const Feed = ({ page, navbarMenu, setNavbarMenu }) => {
       ) : (
         <div className="flex flex-col">
 
-          <div className="w-[75.8rem] h-[3rem]">
+          <div className="flex items-center justify-between w-[75.8rem] h-[3rem]">
+
+            <div className="flex items-center ml-4">
+              <p className="text-[#8e9297] text-4xl mr-4">#</p>
+              <p className="text-lg text-white font-medium">Javascript</p>
+            </div>
+
+            <div className="flex items-center">
+                <img className="mr-3" width={24} height={24} src={NotificationLogo} />
+                <img  className="mr-3" width={24} height={24} src={PinLogo} />
+                <img className="mr-3" width={24} height={24} src={ListFriendsLogo} />
+                
+                <div className="bg-white w-[22.8rem] h-[3rem]">
+                  <div>
+
+                  </div>
+
+                  
+
+                </div>
+            </div>
 
           </div>
 
@@ -139,7 +162,7 @@ const Feed = ({ page, navbarMenu, setNavbarMenu }) => {
 
           <div className="flex flex-row">
               <div className="w-[53rem] h-[52.45rem]">
-                
+
               </div>
 
               <div className="w-[22.8rem] bg-teal-800 h-[52.45rem]"></div>
