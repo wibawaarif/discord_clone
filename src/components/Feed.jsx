@@ -1,6 +1,7 @@
 import NoOnlineFriendsLogo from "../../assets/no_online_friends.svg";
 import NoFriendsLogo from "../../assets/pending_users_icon.svg";
 import LupLogo from "../../assets/lup.svg";
+import QueenLogo from "../../assets/queen.svg";
 
 import ListFriendsLogo from "../../assets/list_friends";
 import PinLogo from "../../assets/pin_icon";
@@ -11,10 +12,11 @@ import PlusLogo from "../../assets/plus_icon";
 import GiftLogo from "../../assets/gift_box_icon";
 import GiftStickerLogo from "../../assets/gif_icon";
 import EmojiLogo from "../../assets/emoji_icon";
+import DiscordLogo from "../../assets/discord_logo";
 
 import FriendsLogo from "../../assets/friends";
 
-const Feed = ({ page, navbarMenu, setNavbarMenu }) => {
+const Feed = ({ page, navbarMenu, setNavbarMenu, groupMember }) => {
   console.log(page);
   return (
     <div className="bg-[#36393F] w-screen flex flex-col">
@@ -235,7 +237,36 @@ const Feed = ({ page, navbarMenu, setNavbarMenu }) => {
               </div>
             </div>
 
-            <div className="w-[20.8rem] bg-teal-800 h-[52.45rem]"></div>
+            <div className="w-[20.8rem] h-[52.45rem] overflow-y-scroll scrollbar">
+
+              <div className="px-3 py-4">
+                <p className="font-medium text-[#8e9297] pl-2">ONLINE-3</p>
+                {
+                groupMember.map((member, index) => {
+                  return (
+                    <div key={index} className="flex items-center py-2 px-2 rounded-lg hover:cursor-pointer hover:bg-[#393C43]">
+                    <DiscordLogo
+                  height={48}
+                  width={48}
+                  outside={`rounded-full bg-${member.color}-600 hover:cursor-pointer group`}
+                />
+                <div className="flex flex-col ml-3">
+                    <p className="text-white font-bold">{member.name}</p>
+                    <p className="text-[#8e9297] font-medium text-[13px]">{member.id}</p>
+                </div>
+                {
+                  index === 0 && <img className="ml-3 mb-[1.2rem]" width={20} height={20} src={QueenLogo} />
+                }
+                </div>
+                  )
+                })
+              }
+
+
+
+              </div>
+
+            </div>
           </div>
         </div>
       )}
