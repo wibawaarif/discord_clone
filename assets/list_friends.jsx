@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 
-<!-- License: PD. Made by undefinedIcooon Mono -->
-<svg height="800px" width="800px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+
+import * as React from "react";
+
+function InboxLogo({ color, size }) {
+  return (
+<svg class={color} height={size} width={size} version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 512 512"  xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#8e9297;}
-</style>
 <g>
 	<path class="st0" d="M501.782,419.646c-9.604-18.553-24.674-30.619-39.394-38.813c-14.721-8.208-29.464-12.862-39.116-16.497
 		c-7.635-2.838-15.668-6.52-21.064-10.321c-2.701-1.873-4.678-3.761-5.698-5.164c-1.052-1.458-1.108-2.104-1.124-2.47
@@ -45,3 +44,7 @@
 		c0,3.308,0.144,6.743,0.439,10.28l0.717,8.552h8.575h118.876l-0.621-7.484C127.604,473.729,127.413,469.202,127.413,464.819z"/>
 </g>
 </svg>
+  );
+}
+
+export default InboxLogo;

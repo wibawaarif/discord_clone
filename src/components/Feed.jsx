@@ -1,8 +1,16 @@
 import NoOnlineFriendsLogo from "../../assets/no_online_friends.svg";
 import NoFriendsLogo from "../../assets/pending_users_icon.svg";
-import NotificationLogo from "../../assets/notification.svg";
-import PinLogo from "../../assets/pin_icon.svg";
-import ListFriendsLogo from "../../assets/list_friends.svg";
+import LupLogo from "../../assets/lup.svg";
+
+import ListFriendsLogo from "../../assets/list_friends";
+import PinLogo from "../../assets/pin_icon";
+import NotificationLogo from "../../assets/notification";
+import QuestionLogo from "../../assets/question_mark_icon.jsx";
+import InboxIcon from "../../assets/inbox";
+import PlusLogo from "../../assets/plus_icon";
+import GiftLogo from "../../assets/gift_box_icon";
+import GiftStickerLogo from "../../assets/gif_icon";
+import EmojiLogo from "../../assets/emoji_icon";
 
 import FriendsLogo from "../../assets/friends";
 
@@ -133,43 +141,102 @@ const Feed = ({ page, navbarMenu, setNavbarMenu }) => {
         </>
       ) : (
         <div className="flex flex-col">
-
           <div className="flex items-center justify-between w-[75.8rem] h-[3rem]">
-
             <div className="flex items-center ml-4">
               <p className="text-[#8e9297] text-4xl mr-4">#</p>
               <p className="text-lg text-white font-medium">Javascript</p>
             </div>
 
             <div className="flex items-center">
-                <img className="mr-3" width={24} height={24} src={NotificationLogo} />
-                <img  className="mr-3" width={24} height={24} src={PinLogo} />
-                <img className="mr-3" width={24} height={24} src={ListFriendsLogo} />
-                
-                <div className="bg-white w-[22.8rem] h-[3rem]">
-                  <div>
+              <NotificationLogo
+                size={24}
+                color="fill-[#8e9297] hover:fill-white mr-3 hover:cursor-pointer"
+              />
+              <PinLogo
+                size={24}
+                color="fill-[#8e9297] hover:fill-white mr-3 hover:cursor-pointer"
+              />
+              <ListFriendsLogo
+                size={24}
+                color="fill-[#8e9297] hover:fill-white mr-3 hover:cursor-pointer"
+              />
 
-                  </div>
-
-                  
-
+              <div className="w-[20.8rem] h-[3rem] flex items-center">
+                <div className="flex bg-[#202225] w-[13rem]">
+                  <input
+                    placeholder="Search"
+                    className="px-2 py-1 outline-none text-sm bg-[#202225] rounded-sm text-white"
+                  />
+                  <img
+                    className="hover:cursor-pointer"
+                    width={25}
+                    height={25}
+                    src={LupLogo}
+                  />
                 </div>
+                <div className="flex ml-7 w-[4.5rem] justify-between">
+                  <InboxIcon
+                    size={24}
+                    color="fill-[#8e9297] hover:fill-white hover:cursor-pointer"
+                  />
+                  <QuestionLogo
+                    size={24}
+                    color="fill-[#8e9297] hover:fill-white hover:cursor-pointer"
+                  />
+                </div>
+              </div>
             </div>
-
           </div>
 
           <span className="h-[0.5px] w-full bg-slate-950"></span>
 
           <div className="flex flex-row">
-              <div className="w-[53rem] h-[52.45rem]">
+            <div className="w-[55rem] h-[52.45rem] flex justify-center overflow-y-scroll scrollbar">
+              <div className="w-[50rem] h-[200rem] flex flex-col justify-between mb-[15rem]">
+                <div className="flex justify-end mt-16">
+                  <button className="bg-[#5865F2] hover:cursor-default text-white transition duration-[400ms] hover:bg-[#7983F5] hover:shadow-xl rounded-lg px-16 py-4 mr-4">
+                    <div className="flex items-center">
+                      <span className="text-xl">Hello, how are you?</span>
+                    </div>
+                  </button>
+                </div>
 
+                <div>
+                  <button className="bg-[#5865F2] hover:cursor-default text-white transition duration-[400ms] hover:bg-[#7983F5] hover:shadow-xl rounded-lg px-16 py-4 mr-4">
+                    <div className="flex items-center">
+                      <span className="text-xl">I'am good, thanks!</span>
+                    </div>
+                  </button>
+                </div>
               </div>
 
-              <div className="w-[22.8rem] bg-teal-800 h-[52.45rem]"></div>
+              <div className="flex rounded-lg flex-row items-center bg-[#41444B] fixed bottom-5 px-5">
+                <PlusLogo
+                  size={26}
+                  color="fill-[#41444B] bg-[#8e9297] rounded-full px-[2px] py-[2px] hover:cursor-pointer hover:bg-white"
+                />
+                <input
+                  autoFocus
+                  placeholder="Message #undefined"
+                  className="placeholder-[#8e9297] w-[40rem] bg-[#41444B] py-3 px-4 text-white outline-none"
+                />
+                <GiftLogo
+                  size={33}
+                  color="text-[#8e9297] rounded-full px-1 py-1 hover:cursor-pointer hover:text-white mr-3"
+                />
+                <GiftStickerLogo
+                  size={33}
+                  color="text-[#8e9297] px-1 py-1 hover:cursor-pointer hover:text-white mr-3"
+                />
+                <EmojiLogo
+                  size={33}
+                  color="text-[#8e9297] px-1 py-1 hover:cursor-pointer hover:text-white"
+                />
+              </div>
+            </div>
 
+            <div className="w-[20.8rem] bg-teal-800 h-[52.45rem]"></div>
           </div>
-
-          
         </div>
       )}
     </div>

@@ -48,7 +48,7 @@ const MainSidebar = (props) => {
               {/* Friend svg */}
               <FriendsLogo
                 outside={
-                  "text-[#8e9297] w-[1.75rem] mr-5 group-hover:text-white ${dashboardMenu === 'friends' ? 'text-white' : 'text-[#8e9297]'}"
+                  `text-[#8e9297] w-[1.75rem] mr-5 group-hover:text-white ${dashboardMenu === 'friends' ? 'text-white' : 'text-[#8e9297]'}`
                 }
               />
 
@@ -70,7 +70,7 @@ const MainSidebar = (props) => {
               {/* Stage Discovery svg */}
               <StageLogo
                 outside={
-                  "text-[#8e9297] w-[1.75rem] mr-5 group-hover:text-white ${dashboardMenu === 'stage discovery' ? 'text-white' : 'text-[#8e9297]'}"
+                  `text-[#8e9297] w-[1.75rem] mr-5 group-hover:text-white ${dashboardMenu === 'stage discovery' ? 'text-white' : 'text-[#8e9297]'}`
                 }
               />
 
@@ -94,7 +94,7 @@ const MainSidebar = (props) => {
               {/* Nitro svg */}
               <NitroLogo
                 outside={
-                  "text-[#8e9297] w-[1.75rem] mr-5 group-hover:text-white ${dashboardMenu === 'nitro' ? 'text-white' : 'text-[#8e9297]'}"
+                  `text-[#8e9297] w-[1.75rem] mr-5 group-hover:text-white ${dashboardMenu === 'nitro' ? 'text-white' : 'text-[#8e9297]'}`
                 }
               />
 
