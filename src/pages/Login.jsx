@@ -9,7 +9,7 @@ const Login = () => {
       }, []);
 
     return (
-        <div className="container h-screen bg-cover w-screen bg-[url('../../assets/login_bg.svg')] flex justify-center items-center">
+        <div className="container h-screen bg-cover w-screen bg-[url('/login_bg.svg')] flex justify-center items-center">
 
             <div className="bg-[#313338] h-[26rem] w-[49rem] rounded-md flex justify-center items-center">
 

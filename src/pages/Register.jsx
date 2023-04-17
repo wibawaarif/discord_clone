@@ -8,7 +8,7 @@ const Register = () => {
       }, []);
 
     return (
-        <div className="container h-screen bg-cover w-screen bg-[url('../../assets/login_bg.svg')] flex justify-center items-center">
+        <div className="container h-screen bg-cover w-screen bg-[url('/login_bg.svg')] flex justify-center items-center">
 
             <div className="bg-[#313338] h-[37rem] w-[30rem] rounded-md flex justify-center items-center">
                 <div className="h-[30rem] w-[28] flex flex-col items-center">
