@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import ChannelSidebar from "../components/ChannelSidebar";
 import MainSidebar from "../components/MainSidebar";
@@ -31,7 +31,7 @@ const groupMember = [
   {
     name: "Michael",
     id: "#2341",
-    color: "emerald",
+    color: "pink",
   },
   {
     name: "John",
@@ -110,7 +110,7 @@ const Dashboard = () => {
   const [dashboardMenu, setDashboardMenu] = useState("friends");
   const [groupMenu, setGroupMenu] = useState("rules");
   const [navbarMenu, setNavbarMenu] = useState("online");
-  const [isMicActive, setIsMicActive] = useState(false);
+  const [isMicActive, setIsMicActive] = useState(true);
   const [isSpeakerActive, setIsSpeakerActive] = useState(false);
 
   const mainSideBarProps = {
@@ -122,8 +122,13 @@ const Dashboard = () => {
     setIsMicActive,
     isSpeakerActive,
     setIsSpeakerActive,
-    groupMenu, setGroupMenu
+    groupMenu,
+    setGroupMenu,
   };
+
+  useEffect(() => {
+    document.title = "Dashboard | Discord";
+  }, []);
 
   return (
     <div className="container h-screen w-screen">

@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
 const Register = () => {
+
+    useEffect(() => {
+        document.title = "Register | Discord";
+      }, []);
 
     return (
         <div className="container h-screen bg-cover w-screen bg-[url('../../assets/login_bg.svg')] flex justify-center items-center">

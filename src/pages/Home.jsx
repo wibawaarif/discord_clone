@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -50,6 +51,11 @@ const prepareDashboardComponent = () => {
 
 
 function Home() {
+
+  useEffect(() => {
+    document.title = "Discord | Your Place to Talk and Hang Out";
+  }, []);
+
   return (
     <div className="container">
       <div style={{ height: "625px" }} className="static bg-[#404EED] z-0">
@@ -75,12 +81,12 @@ function Home() {
           </div>
 
           <div className="mt-11 flex items-center z-40">
-            <button className="bg-white transition duration-[400ms] hover:text-[#5865f2] hover:shadow-xl rounded-full px-8 py-4 mr-4">
+            <a href="https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x86" target="_blank" rel="noopener noreferrer" className="bg-white transition duration-[400ms] hover:text-[#5865f2] hover:shadow-xl rounded-full px-8 py-4 mr-4">
               <div className="flex items-center">
                 <img className="w-6 h-6 mr-2" src={Download} />
                 <span className="text-xl">Download for Windows</span>
               </div>
-            </button>
+            </a>
             <Link onMouseOver={prepareDashboardComponent} to="/dashboard" className="bg-zinc-800 transition duration-[400ms] hover:bg-zinc-700 hover:shadow-xl text-white px-8 py-4 rounded-full">
               <span className="text-xl">Open Discord in your browser</span>
             </Link>

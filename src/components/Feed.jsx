@@ -247,7 +247,8 @@ const Feed = ({ page, navbarMenu, setNavbarMenu, groupMember }) => {
                     <DiscordLogo
                   height={48}
                   width={48}
-                  outside={`rounded-full border-2 bg-yellow-600 hover:cursor-pointer group`}
+                  extraStyle={member.color}
+                  outside={`rounded-full border-2 hover:cursor-pointer group`}
                 />
                 <div className="flex flex-col ml-3">
                     <p className="text-white font-bold">{member.name}</p>

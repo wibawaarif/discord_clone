@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import BarcodeImage from "../../assets/qr_code.png";
+import { useEffect } from "react";
 
 const Login = () => {
+
+    useEffect(() => {
+        document.title = "Login | Discord";
+      }, []);
 
     return (
         <div className="container h-screen bg-cover w-screen bg-[url('../../assets/login_bg.svg')] flex justify-center items-center">
