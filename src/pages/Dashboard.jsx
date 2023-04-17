@@ -98,6 +98,11 @@ const groupMember = [
     id: "#4859",
     color: "violet",
   },
+  {
+    name: "Dicky",
+    id: "#0007",
+    color: "lime",
+  },
 ];
 
 const Dashboard = () => {

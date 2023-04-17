@@ -44,6 +44,10 @@ const footer = [
   },
 ];
 
+const prepareDashboardComponent = () => {
+  import('./Dashboard')
+}
+
 
 function Home() {
   return (
@@ -77,7 +81,7 @@ function Home() {
                 <span className="text-xl">Download for Windows</span>
               </div>
             </button>
-            <Link to="/dashboard" className="bg-zinc-800 transition duration-[400ms] hover:bg-zinc-700 hover:shadow-xl text-white px-8 py-4 rounded-full">
+            <Link onMouseOver={prepareDashboardComponent} to="/dashboard" className="bg-zinc-800 transition duration-[400ms] hover:bg-zinc-700 hover:shadow-xl text-white px-8 py-4 rounded-full">
               <span className="text-xl">Open Discord in your browser</span>
             </Link>
           </div>
