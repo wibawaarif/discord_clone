@@ -8,7 +8,6 @@ import InstagramIcon from "../../assets/instagram_icon.svg";
 import DiscordMainLogo from "../../assets/discord_main_logo.svg";
 
 const Footer = ({ items }) => {
-  console.log(items);
   return (
     <div
       style={{ height: "575px" }}

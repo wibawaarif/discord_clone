@@ -17,15 +17,14 @@ const channels = [
   "showcase",
   "help",
   "notifications-and-roles",
-  "blogging",
-  "machine-learning",
-  "blockchain",
-  "smart-contract",
-  "web3",
-  "fullstack-dev",
-  "showcase",
-  "help",
-  "notifications-and-roles",
+  "games",
+  "front-end",
+  "back-end",
+  "Metaverse",
+  "Bitcoin",
+  "Trading",
+  "Annual Meeting",
+  "Monthly Discuss",
 ];
 
 const groupMember = [
@@ -104,10 +103,10 @@ const groupMember = [
 const Dashboard = () => {
   const [page, setPage] = useState("dashboard");
   const [dashboardMenu, setDashboardMenu] = useState("friends");
+  const [groupMenu, setGroupMenu] = useState("rules");
   const [navbarMenu, setNavbarMenu] = useState("online");
   const [isMicActive, setIsMicActive] = useState(false);
   const [isSpeakerActive, setIsSpeakerActive] = useState(false);
-  const [initialAudio, setInitialAudio] = useState("");
 
   const mainSideBarProps = {
     page,
@@ -118,8 +117,7 @@ const Dashboard = () => {
     setIsMicActive,
     isSpeakerActive,
     setIsSpeakerActive,
-    initialAudio,
-    setInitialAudio,
+    groupMenu, setGroupMenu
   };
 
   return (

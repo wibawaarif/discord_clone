@@ -1,10 +1,10 @@
 // import DiscordLogo from "../../assets/discord_logo.svg";
 import GroupLogo from "../../assets/new_line.png";
-import PlusLogo from "../../assets/plus.svg";
-import DownloadGreen from "../../assets/download_green.svg";
 import CompassLogo from "../../assets/compass.svg";
 
-import DiscordLogo from "../../assets/discord_logo.jsx";
+import PlusLogo from "../../assets/plus";
+import DownloadGreen from "../../assets/download_green";
+import DiscordLogo from "../../assets/discord_logo";
 
 const ChannelSidebar = ({page, setPage}) => {
   return (
@@ -15,7 +15,7 @@ const ChannelSidebar = ({page, setPage}) => {
                 <img onClick={() => setPage('group-1')} width={55} height={55} className="rounded-2xl hover:cursor-pointer mt-3" src={GroupLogo} />
 
                 <div className="bg-[#36393F] rounded-full w-[3.438rem] h-[3.438rem] mt-3 hover:cursor-pointer flex justify-center items-center transition duration-[400ms] hover:bg-[#3ba55d] group">
-                    <img width={20} height={20} src={PlusLogo} />
+                    <PlusLogo size={20} color='fill-[#43b581] group-hover:fill-white' />
                 </div>
 
                 <div className="bg-[#36393F] rounded-full w-[3.438rem] h-[3.438rem] mt-3 hover:cursor-pointer flex justify-center items-center transition duration-[400ms] hover:bg-[#3ba55d] group">
@@ -25,7 +25,7 @@ const ChannelSidebar = ({page, setPage}) => {
                 </div>
 
                 <div className="bg-[#36393F] rounded-full w-[3.438rem] h-[3.438rem] mt-3 hover:cursor-pointer flex justify-center items-center transition duration-[400ms] hover:bg-[#3ba55d] group">
-                    <img width={22} height={22} src={DownloadGreen} />
+                    <DownloadGreen size={20} color='fill-[#43b581] group-hover:fill-white' />
                 </div>
 
                 <div>

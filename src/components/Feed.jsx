@@ -17,7 +17,6 @@ import DiscordLogo from "../../assets/discord_logo";
 import FriendsLogo from "../../assets/friends";
 
 const Feed = ({ page, navbarMenu, setNavbarMenu, groupMember }) => {
-  console.log(page);
   return (
     <div className="bg-[#36393F] w-screen flex flex-col">
       {page === "dashboard" ? (

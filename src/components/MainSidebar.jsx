@@ -1,13 +1,13 @@
 import PlusLogo from "../../assets/plus_icon.svg";
 import EmptyList from "../../assets/empty_dm_list.svg";
 import CloseLogo from "../../assets/close_icon.svg";
-import HashtagLogo from "../../assets/hashtag.svg";
 import ArrowLogo from "../../assets/arrow.svg";
 import OnlineLogo from "../../assets/online.svg";
 import MicLogo from "../../assets/microphone.svg";
 import HeadphoneLogo from "../../assets/headphone.svg";
 import SettingsLogo from "../../assets/settings.svg";
 
+import HashtagLogo from "../../assets/hashtag";
 import FriendsLogo from "../../assets/friends";
 import NitroLogo from "../../assets/nitro_icon";
 import StageLogo from "../../assets/stage_discovery";
@@ -23,6 +23,8 @@ const MainSidebar = (props) => {
     setIsMicActive,
     isSpeakerActive,
     setIsSpeakerActive,
+    groupMenu,
+    setGroupMenu
   } = props;
 
   return (
@@ -123,7 +125,7 @@ const MainSidebar = (props) => {
         </>
       ) : (
         <>
-          <div className="w-[14.5rem] h-[54.5rem] overflow-y-scroll scrollbar">
+          <div className="w-[14.5rem] h-[52rem] mb-16 overflow-y-scroll scrollbar">
             <div className="flex justify-between px-2 mt-2">
               <p className="text-white font-bold">React Lovers</p>
               <img
@@ -135,8 +137,8 @@ const MainSidebar = (props) => {
             </div>
 
             <div className="flex rounded-md px-2 py-2 items-center mt-2 hover:cursor-pointer hover:bg-[#393C43] group">
-              <img className="mr-3" width={22} height={22} src={HashtagLogo} />
-              <p className="text-[#8e9297] font-medium group-hover:text-white">
+              <HashtagLogo color={`mr-3 fill-[#8e9297] group-hover:fill-white ${page === 'group-1' && 'fill-white'}`} size={22} />
+              <p className={`text-[#8e9297] font-medium group-hover:text-white ${page === 'group-1' && 'text-white'}`}>
                 rules
               </p>
             </div>
@@ -147,14 +149,9 @@ const MainSidebar = (props) => {
             </div>
 
             {channels.map((x) => (
-              <div className="flex rounded-md px-2 py-2 items-center mt-2 hover:cursor-pointer hover:bg-[#393C43] group">
-                <img
-                  className="mr-3"
-                  width={22}
-                  height={22}
-                  src={HashtagLogo}
-                />
-                <p className="text-[#8e9297] font-medium group-hover:text-white">
+              <div onClick={() => setGroupMenu(x)} className="flex rounded-md px-2 py-2 items-center mt-2 hover:cursor-pointer hover:bg-[#393C43] group">
+                <HashtagLogo color={`mr-3 fill-[#8e9297] group-hover:fill-white ${groupMenu === x ? 'fill-white' : ''}`} size={22} />
+                <p className={`text-[#8e9297] font-medium group-hover:text-white ${groupMenu === x ? 'text-white' : ''}`}>
                   {x}
                 </p>
               </div>
