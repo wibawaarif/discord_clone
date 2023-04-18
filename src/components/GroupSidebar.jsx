@@ -25,7 +25,7 @@ const GroupSidebar = (props) => {
     <>
     <div className="w-[14.5rem] h-[52rem] mb-16 overflow-y-scroll scrollbar">
       <div className="flex justify-between px-2 mt-2">
-        <p className="text-white font-bold">React Lovers</p>
+        <p className="text-white font-bold">Self Improvement</p>
         <img
           className="hover:cursor-pointer"
           width={20}
