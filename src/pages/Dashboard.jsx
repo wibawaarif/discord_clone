@@ -131,7 +131,7 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className="container h-screen w-screen">
+    <div className="container overflow-y-hidden h-screen w-screen">
       <div className="flex">
         {/* Channel Sidebar */}
         <ChannelSidebar page={page} setPage={setPage} />
